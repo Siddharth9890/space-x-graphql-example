@@ -1,0 +1,22 @@
+{
+  "name": "space-x-graphql-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "generate:sdk": "graphql-sdk-generator -c config.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "graphql": "^16.9.0",
+    "graphql-request": "^6.1.0"
+  }
+}

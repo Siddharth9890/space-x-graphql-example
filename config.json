@@ -1,0 +1,6 @@
+{
+  "url": "https://spacex-production.up.railway.app/",
+  "sdkName": "SpaceX",
+  "fileType": "ts",
+  "debug": true
+}
