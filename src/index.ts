@@ -1,5 +1,6 @@
 import { GraphQLClient } from "graphql-request";
 import { getSdk } from "../graphqlSDKGenerator/graphqlSDKGenerator";
+import { errorHandler } from "./errorHandler";
 
 const initializeSDK = () => {
   // we can set custom headers
@@ -15,13 +16,20 @@ const initializeSDK = () => {
 
 const main = async () => {
   const sdkInstance = initializeSDK();
-  const companies = await sdkInstance.companyQuery();
+  try {
+    const companies = await sdkInstance.companyQuery();
 
-  const user = await sdkInstance.insert_usersMutation({
-    objects: { id: 1, name: "test", rocket: "spacex" },
-  });
+    const user = await sdkInstance.insert_usersMutation({
+      objects: { id: 1, name: "test", rocket: "spacex" },
+    });
 
-  console.log(companies, user);
+    // uncomment this line to check how error handler works
+    // await sdkInstance.usersSubscription();
+
+    console.log(companies, user);
+  } catch (error) {
+    console.log(errorHandler(error));
+  }
 };
 
 main();
