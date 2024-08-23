@@ -1,6 +1,7 @@
 import { GraphQLClient } from "graphql-request";
 import { getSdk } from "../graphqlSDKGenerator/graphqlSDKGenerator";
 import { errorHandler } from "./errorHandler";
+import { clientTimingWrapper } from "./clientWrapper";
 
 const initializeSDK = () => {
   // we can set custom headers
@@ -11,7 +12,7 @@ const initializeSDK = () => {
     }
   );
 
-  return getSdk(client);
+  return getSdk(client, clientTimingWrapper);
 };
 
 const main = async () => {
