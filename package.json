@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "generate:sdk": "graphql-sdk-generator -c config.json"
+    "generate:base:sdk": "graphql-sdk-generator -c ./config/base-config.json",
+    "generate:complete:sdk": "graphql-sdk-generator -c ./config/complete-config.json"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
     "graphql": "^16.9.0",
     "graphql-request": "^6.1.0"
   }

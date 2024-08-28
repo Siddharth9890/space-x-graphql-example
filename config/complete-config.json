@@ -1,0 +1,13 @@
+{
+  "url": "https://spacex-production.up.railway.app/",
+  "sdkName": "SpaceX",
+  "fileType": "ts",
+  "debug": true,
+  "baseDirectory": "./",
+  "directoryName": "spaceX",
+  "depth": 2,
+  "toGenerateSchemaFile": false,
+  "headers": {
+    "x-api-key": "api-key"
+  }
+}
