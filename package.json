@@ -1,7 +1,7 @@
 {
   "name": "space-x-graphql-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "A example using graphql-sdk-generator",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
@@ -9,7 +9,7 @@
     "generate:complete:sdk": "graphql-sdk-generator -c ./config/complete-config.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "Siddharth <siddharth.a9890@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "ts-node": "^10.9.2",
